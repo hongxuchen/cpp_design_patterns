@@ -1,0 +1,10 @@
+#include "states.hpp"
+#include "tank.hpp"
+
+void MoveState::move(int x, int y) {
+  std::cout << pTank->id() << " moves to (" << x << ", " << y << ")\n";
+}
+
+void MoveState::attack() { std::cout << pTank->id() << " attacks for 20\n"; }
+
+MoveState::~MoveState() = default;

@@ -1,0 +1,2 @@
+add_subdirectory(command1)
+add_subdirectory(command2)

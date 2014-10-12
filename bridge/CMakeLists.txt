@@ -1,0 +1,2 @@
+add_subdirectory(bridge1)
+add_subdirectory(bridge2)
