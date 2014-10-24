@@ -1,9 +1,10 @@
 #ifndef MANAGER_HPP
 #define MANAGER_HPP
 
-#include "worker.hpp"
 #include <vector>
 #include <memory>
+
+#include "worker.hpp"
 
 class Observer {
   typedef std::shared_ptr<Worker> WorkerPtr;

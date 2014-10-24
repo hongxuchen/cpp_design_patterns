@@ -70,4 +70,3 @@ void ConcreteDecoratorD::Operation() {
 void ConcreteDecoratorD::AddBehavorD() {
   std::cout << __PRETTY_FUNCTION__ << "\n";
 }
-
