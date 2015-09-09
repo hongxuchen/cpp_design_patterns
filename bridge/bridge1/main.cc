@@ -1,6 +1,6 @@
-#include "char_msg_sender.hpp"
-#include "hello_msg_impl.hpp"
-#include "bye_msg_impl.hpp"
+#include "char_msg_sender.hh"
+#include "hello_msg_impl.hh"
+#include "bye_msg_impl.hh"
 
 int main(void) {
   CharMessageSender charMsgSender;

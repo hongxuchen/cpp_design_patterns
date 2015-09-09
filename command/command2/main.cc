@@ -1,9 +1,9 @@
 #include <iostream>
 #include <memory>
 
-#include "roast_cook.hpp"
-#include "command.hpp"
-#include "waiter.hpp"
+#include "roast_cook.hh"
+#include "command.hh"
+#include "waiter.hh"
 
 int main() {
   RoastCook cook;

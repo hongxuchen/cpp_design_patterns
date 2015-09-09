@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 
-#include "iterator.hpp"
-#include "aggregator.hpp"
+#include "iterator.hh"
+#include "aggregator.hh"
 
 int main() {
   Aggregator<int> aggr;

@@ -1,6 +1,6 @@
-#include "decorator.hpp"
-#include "concrete_component.hpp"
-#include "one_decorator.hpp"
+#include "decorator.hh"
+#include "concrete_component.hh"
+#include "one_decorator.hh"
 #include <iostream>
 
 int main(void) {

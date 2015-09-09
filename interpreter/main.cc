@@ -1,10 +1,10 @@
 #include <iostream>
 #include <memory>
-/// #include "boost/type_index.hpp"
+/// #include "boost/type_index.hh"
 
-#include "ctx.hpp"
-#include "expr_mul.hpp"
-#include "expr_add.hpp"
+#include "ctx.hh"
+#include "expr_mul.hh"
+#include "expr_add.hh"
 
 /// using boost::typeindex::type_id_with_cvr;
 

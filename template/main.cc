@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "coffee.hpp"
-#include "tea.hpp"
+#include "coffee.hh"
+#include "tea.hh"
 
 
 int main(void) {

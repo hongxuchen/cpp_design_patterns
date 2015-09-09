@@ -6,7 +6,7 @@
  */
 
 #include <cassert>
-#include "factory.hpp"
+#include "factory.hh"
 
 int main() {
   FlyWeightFactory fw;

@@ -1,4 +1,4 @@
-#include "tank.hpp"
+#include "tank.hh"
 
 int main() {
   Tank tank("JUNGLE");

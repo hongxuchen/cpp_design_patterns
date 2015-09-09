@@ -1,7 +1,7 @@
 #include <iostream>
 #include <memory>
 
-#include "managers.hpp"
+#include "managers.hh"
 
 int main() {
   std::unique_ptr<Manager> common = std::make_unique<CommonManager>("Manager");

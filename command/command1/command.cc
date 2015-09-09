@@ -1,5 +1,5 @@
-#include "command.hpp"
-#include "receiver.hpp"
+#include "command.hh"
+#include "receiver.hh"
 
 Command::~Command() = default;
 

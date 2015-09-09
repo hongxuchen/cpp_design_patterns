@@ -1,4 +1,4 @@
-#include "datetimeprinter.hpp"
+#include "datetimeprinter.hh"
 
 int main(void) {
   DateTimePrinter printer;

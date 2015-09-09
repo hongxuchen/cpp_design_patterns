@@ -1,4 +1,4 @@
-#include "my_class.hpp"
+#include "my_class.hh"
 #include <iostream>
 
 int main(void) {

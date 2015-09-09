@@ -1,5 +1,5 @@
-#include "negative_lower_factory.hpp"
-#include "positive_upper_factory.hpp"
+#include "negative_lower_factory.hh"
+#include "positive_upper_factory.hh"
 #include <memory>
 
 int main(void) {

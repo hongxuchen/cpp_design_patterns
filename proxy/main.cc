@@ -1,4 +1,4 @@
-#include "const_passwd_proxy.hpp"
+#include "const_passwd_proxy.hh"
 
 #include <iostream>
 #include <memory>

@@ -1,4 +1,4 @@
-#include "dateprinter.hpp"
+#include "dateprinter.hh"
 
 #include <iostream>
 #include <ctime>

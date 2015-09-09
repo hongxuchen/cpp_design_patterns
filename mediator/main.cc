@@ -1,5 +1,5 @@
-#include "telephone.hpp"
-#include "mediator.hpp"
+#include "telephone.hh"
+#include "mediator.hh"
 
 #include <memory>
 

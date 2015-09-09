@@ -1,4 +1,4 @@
-#include "expr_mul.hpp"
+#include "expr_mul.hh"
 
 #include <iostream>
 #include <cstdlib>

@@ -1,5 +1,5 @@
-#include "prototype.hpp"
-#include "concrete_prototype.hpp"
+#include "prototype.hh"
+#include "concrete_prototype.hh"
 #include <memory>
 
 int main(void) {

@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "chinese_builder.hpp"
-#include "indian_builder.hpp"
-#include "mexican_builder.hpp"
-#include "cook.hpp"
+#include "chinese_builder.hh"
+#include "indian_builder.hh"
+#include "mexican_builder.hh"
+#include "cook.hh"
 #include <memory>
 
 int main(void) {

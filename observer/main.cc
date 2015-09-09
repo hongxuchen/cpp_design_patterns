@@ -1,6 +1,6 @@
 #include <string>
 
-#include "observer.hpp"
+#include "observer.hh"
 
 int main() {
   auto p = std::make_unique<Observer>();

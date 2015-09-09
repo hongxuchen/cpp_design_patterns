@@ -1,4 +1,4 @@
-#include "timeprinter.hpp"
+#include "timeprinter.hh"
 #include <iostream>
 #include <ctime>
 #include <stdlib.h>

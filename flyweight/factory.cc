@@ -1,4 +1,4 @@
-#include "factory.hpp"
+#include "factory.hh"
 #include <iostream>
 
 FlyWeightFactory::FlyWeightPtr FlyWeightFactory::getFlyWeight(

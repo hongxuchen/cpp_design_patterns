@@ -1,4 +1,4 @@
-#include "telephone.hpp"
+#include "telephone.hh"
 #include <iostream>
 
 std::ostream &operator<<(std::ostream &os, Telephone &phone) {

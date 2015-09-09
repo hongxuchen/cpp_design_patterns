@@ -1,4 +1,4 @@
-#include "meal.hpp"
+#include "meal.hh"
 #include <iostream>
 
 void Meal::serveMeal() {

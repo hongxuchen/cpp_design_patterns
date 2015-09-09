@@ -1,4 +1,4 @@
-#include "singleton.hpp"
+#include "singleton.hh"
 
 int main(void) {
   Single &single = Single::getInstance();

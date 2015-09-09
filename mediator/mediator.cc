@@ -1,4 +1,4 @@
-#include "mediator.hpp"
+#include "mediator.hh"
 
 Mediator::Mediator() {}
 

@@ -1,4 +1,4 @@
-#include "composite.hpp"
+#include "composite.hh"
 #include <iostream>
 
 int main(void) {

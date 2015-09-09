@@ -1,5 +1,5 @@
-#include "class_adapter.hpp"
-#include "object_adapter.hpp"
+#include "class_adapter.hh"
+#include "object_adapter.hh"
 
 int main() {
   Target* pTarget = nullptr;

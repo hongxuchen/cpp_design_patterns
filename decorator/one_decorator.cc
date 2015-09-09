@@ -1,4 +1,4 @@
-#include "one_decorator.hpp"
+#include "one_decorator.hh"
 #include <iostream>
 
 DecoratorOnlyOne::DecoratorOnlyOne(ComponentPtr com) : com_(com) {}

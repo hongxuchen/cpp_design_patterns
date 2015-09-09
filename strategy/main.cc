@@ -1,7 +1,7 @@
 #include <memory>
-#include "decider.hpp"
-#include "op1.hpp"
-#include "op2.hpp"
+#include "decider.hh"
+#include "op1.hh"
+#include "op2.hh"
 
 int main(void) {
   auto op1 = std::make_unique<Operator1>();

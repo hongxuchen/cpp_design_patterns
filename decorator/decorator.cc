@@ -1,4 +1,4 @@
-#include "decorator.hpp"
+#include "decorator.hh"
 #include <iostream>
 
 Decorator::Decorator(ComponentPtr com) { com_ = com; }

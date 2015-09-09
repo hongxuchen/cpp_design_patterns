@@ -1,4 +1,4 @@
-#include "datetimeprinter.hpp"
+#include "datetimeprinter.hh"
 #include <iostream>
 
 DateTimePrinter::DateTimePrinter() : tp_(TimePrinter()), dp_(DatePrinter()) {}

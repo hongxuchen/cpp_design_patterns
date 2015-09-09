@@ -1,4 +1,4 @@
-#include "con_fly_weight.hpp"
+#include "con_fly_weight.hh"
 
 #include <iostream>
 

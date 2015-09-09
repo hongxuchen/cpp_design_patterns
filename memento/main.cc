@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include "oringinator.hpp"
-#include "care_taker.hpp"
+#include "oringinator.hh"
+#include "care_taker.hh"
 
 int main(void) {
   Originator originator;

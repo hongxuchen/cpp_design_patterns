@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include <boost/timer.hpp>
+#include <boost/timer.hh>
 
 // Policy version
 template <typename operation_policy>

@@ -1,6 +1,6 @@
-#include "command.hpp"
-#include "invoker.hpp"
-#include "receiver.hpp"
+#include "command.hh"
+#include "invoker.hh"
+#include "receiver.hh"
 
 #include <memory>
 

@@ -1,5 +1,5 @@
-#include "f1.hpp"
-#include "f2.hpp"
+#include "f1.hh"
+#include "f2.hh"
 
 int main(void) {
   AbsFactory *factory = nullptr;

@@ -1,5 +1,5 @@
-#include "waiter.hpp"
-#include "command.hpp"
+#include "waiter.hh"
+#include "command.hh"
 #include <iostream>
 
 void Waiter::setCmd(Command* cmd) {
