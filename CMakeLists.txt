@@ -1,6 +1,19 @@
 cmake_minimum_required(VERSION 2.8)
 project(design_pattern C CXX)
 
+
+set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMake")
+
+if(EXISTS ${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+    include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+    conan_basic_setup()
+else()
+    message(WARNING "The file conanbuildinfo.cmake doesn't exist, you have to run conan install first")
+endif()
+
+include("cmakepp")
+include("cotire")
+
 SET(PATTERN_DIR_LIST
   factory
   absfactory
