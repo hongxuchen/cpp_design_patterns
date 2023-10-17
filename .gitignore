@@ -1,96 +1,74 @@
-SETUP/
-*.out
 
-# Created by https://www.gitignore.io/api/c,c++,cmake
-
-### C ###
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
+#
 *.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
 *.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
+build/
+### C ###
 ### C++ ###
-# Prerequisites
-
-# Compiled Object files
-*.slo
-
-# Precompiled Headers
-
-# Compiled Dynamic libraries
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-
-# Executables
-
 ### CMake ###
 CMakeCache.txt
 CMakeFiles
-CMakeScripts
-Testing
-Makefile
 cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-
-# End of https://www.gitignore.io/api/c,c++,cmake
-#
-
-.idea
+CMakeScripts
 CMake/tmp
+*.cmd
+compile_commands.json
+# Compiled Dynamic libraries
+# Compiled Object files
+# Compiled Static libraries
 conanbuildinfo.cmake
 conaninfo.txt
+# Created by https://www.gitignore.io/api/c,c++,cmake
+CTestTestfile.cmake
+*.d
+# Debug files
+dkms.conf
+*.dll
+*.dSYM/
+*.dylib
+*.elf
+# End of https://www.gitignore.io/api/c,c++,cmake
+*.exe
+# Executables
+*.exp
+# Fortran module files
+*.gch
+*.hex
+*.i*86
+*.idb
+.idea
+*.ilk
+install_manifest.txt
+# Kernel Module Compile Results
+*.ko
+*.la
+*.lai
+*.lib
+# Libraries
+# Linker output
+*.lo
+Makefile
+*.map
+Mkfile.old
+*.mod
+*.mod*
+modules.order
+Module.symvers
+*.o
+*.obj
+# Object files
+*.out
+*.pch
+*.pdb
+# Precompiled Headers
+# Prerequisites
+SETUP/
+# Shared objects (inc. Windows DLLs)
+*.slo
+*.smod
+*.so
+*.so.*
+*.su
+Testing
+.tmp_versions/
+*.x86_64
