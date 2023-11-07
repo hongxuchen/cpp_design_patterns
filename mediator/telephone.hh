@@ -11,7 +11,7 @@ typedef std::shared_ptr<Mediator> MediatorPtr;
 
 class Telephone {
  public:
-  Telephone(int phoneNum, MediatorPtr m);
+  Telephone(int phone_num, MediatorPtr m);
   void dial(int phoneNum);
   int num() const { return num_; }
   void onCallReceive(int incommingNum);

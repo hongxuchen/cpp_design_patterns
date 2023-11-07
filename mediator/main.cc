@@ -3,7 +3,7 @@
 
 #include <memory>
 
-int main(void) {
+int main() {
   auto mediator = std::make_shared<Mediator>();
   Telephone p1(111, mediator);
   Telephone p2(222, mediator);

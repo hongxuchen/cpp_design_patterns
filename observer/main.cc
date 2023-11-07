@@ -1,6 +1,8 @@
+#include <memory>
 #include <string>
 
 #include "observer.hh"
+#include "worker.hh"
 
 int main() {
   auto p = std::make_unique<Observer>();

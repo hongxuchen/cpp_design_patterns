@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "component.hh"
+
 class ConcreteComponent final : public Component {
  public:
   ConcreteComponent() { std::cout << __PRETTY_FUNCTION__ << "\n"; }

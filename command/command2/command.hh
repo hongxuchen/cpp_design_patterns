@@ -16,13 +16,13 @@ class Command {
 class MakeMuttonCmd final : public Command {
  public:
   MakeMuttonCmd(RoastCook* cook) : Command(cook) {}
-  virtual void ExecuteCmd() { cook_->MakeMutton(); }
+   void ExecuteCmd() override { cook_->MakeMutton(); }
 };
 
 class MakeChickenWingCmd final : public Command {
  public:
   MakeChickenWingCmd(RoastCook* cook) : Command(cook) {}
-  virtual void ExecuteCmd() { cook_->MakeChickenWing(); }
+   void ExecuteCmd() override { cook_->MakeChickenWing(); }
 };
 
 #endif

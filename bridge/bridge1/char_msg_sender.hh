@@ -4,17 +4,16 @@
 #include "abs_msg_sender.hh"
 
 class CharMessageSender : public AbsMsgSender {
-
  public:
   CharMessageSender() : _impl(nullptr) {}
 
-  ~CharMessageSender() {}
+  ~CharMessageSender() override = default;
 
-  void sendMessage() {
+  void sendMessage() override {
     if (_impl) _impl->sendMessage();
   }
 
-  void setMessage(AbsMessageImpl* impl) { _impl = impl; }
+  void setMessage(AbsMessageImpl* impl) override { _impl = impl; }
 
  protected:
   AbsMessageImpl* _impl;

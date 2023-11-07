@@ -1,28 +1,30 @@
-#include "decorator.hh"
+#include "component.hh"
 #include "concrete_component.hh"
+#include "decorator.hh"
 #include "one_decorator.hh"
 #include <iostream>
+#include <memory>
 
-int main(void) {
+int main() {
   {
-    ComponentPtr pCom = std::make_shared<ConcreteComponent>();
-    pCom = std::make_shared<ConcreteDecoratorA>(pCom);
-    pCom = std::make_shared<ConcreteDecoratorB>(pCom);
-    pCom = std::make_shared<ConcreteDecoratorC>(pCom);
-    pCom = std::make_shared<ConcreteDecoratorD>(pCom);
-    pCom->Operation();
+    ComponentPtr p_com = std::make_shared<ConcreteComponent>();
+    p_com = std::make_shared<ConcreteDecoratorA>(p_com);
+    p_com = std::make_shared<ConcreteDecoratorB>(p_com);
+    p_com = std::make_shared<ConcreteDecoratorC>(p_com);
+    p_com = std::make_shared<ConcreteDecoratorD>(p_com);
+    p_com->Operation();
   }
   std::cout << "\n---\n\n";
   {
-    ComponentPtr pCom1 = nullptr;
-    pCom1 = std::make_shared<ConcreteComponent>();
-    pCom1 = std::make_shared<DecoratorOnlyOne>(pCom1);
-    pCom1->Operation();
+    ComponentPtr p_com1 = nullptr;
+    p_com1 = std::make_shared<ConcreteComponent>();
+    p_com1 = std::make_shared<DecoratorOnlyOne>(p_com1);
+    p_com1->Operation();
 
-    ConcreteComponent component;
-    pCom1 = std::make_shared<ConcreteComponent>(component);
-    pCom1 = std::make_shared<DecoratorOnlyOne>(pCom1);
-    pCom1 = std::make_shared<ConcreteComponent>();
+    ConcreteComponent const component;
+    p_com1 = std::make_shared<ConcreteComponent>(component);
+    p_com1 = std::make_shared<DecoratorOnlyOne>(p_com1);
+    p_com1 = std::make_shared<ConcreteComponent>();
   }
   return 0;
 }

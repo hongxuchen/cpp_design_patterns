@@ -3,8 +3,8 @@
 
 class Adaptee {
  public:
-  Adaptee() {}
-  ~Adaptee() {}
+  Adaptee() = default;
+  ~Adaptee() = default;
   void SpecificRequest() {}
 };
 

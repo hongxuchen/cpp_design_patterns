@@ -1,5 +1,5 @@
 #include "observer.hh"
 
 void Observer::notify() {
-  for (auto observer : observers_) observer->update();
+  for (const auto& observer : observers_) observer->update();
 }

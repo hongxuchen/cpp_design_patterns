@@ -3,8 +3,8 @@
 
 class Target {
  public:
-  Target() {}
-  virtual ~Target() {}
+  Target() = default;
+  virtual ~Target() = default;
   virtual void Request() = 0;
 };
 

@@ -1,12 +1,11 @@
 #ifndef _ABSPOSITIVEUPPERPRINTERFACTORY_H
 #define _ABSPOSITIVEUPPERPRINTERFACTORY_H
 
+#include "abs_factory.hh"
 #include "positive_num.hh"
 #include "upper_char.hh"
-#include "abs_factory.hh"
 
 class PositiveUpperFactory : public AbsFactory {
-
  public:
   PositiveUpperFactory() {}
   virtual ~PositiveUpperFactory() {}

@@ -5,6 +5,7 @@
 build/
 ### C ###
 ### C++ ###
+.cache/
 ### CMake ###
 CMakeCache.txt
 CMakeFiles

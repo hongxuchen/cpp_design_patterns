@@ -5,7 +5,7 @@
 
 class MultiCuisineCook {
  public:
-  MultiCuisineCook() : builder_(nullptr) {}
+  MultiCuisineCook() = default;
   ~MultiCuisineCook() = default;
 
   void setMealBuilder(MealBuilder* mealBuilder) { builder_ = mealBuilder; }
@@ -19,7 +19,7 @@ class MultiCuisineCook {
   }
 
  private:
-  MealBuilder* builder_;
+  MealBuilder* builder_{};
 };
 
 #endif

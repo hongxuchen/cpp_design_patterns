@@ -5,13 +5,12 @@
 
 class IndianMealBuilder final : public MealBuilder {
  public:
-  IndianMealBuilder() {}
-  ~IndianMealBuilder() {}
+  IndianMealBuilder() = default;
+  ~IndianMealBuilder() override = default;
 
-  virtual void buildStarter() override { meal_.setMealItem("FriedOnion"); }
-  virtual void buildMainCourse() override { meal_.setMealItem("CheeseCurry"); }
-  virtual void buildDessert() override { meal_.setMealItem("SweetBalls"); }
+  void buildStarter() override { meal_.setMealItem("FriedOnion"); }
+  void buildMainCourse() override { meal_.setMealItem("CheeseCurry"); }
+  void buildDessert() override { meal_.setMealItem("SweetBalls"); }
 };
-
 
 #endif

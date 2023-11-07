@@ -11,7 +11,7 @@ class AbsProduct {
   AbsProduct() {}
 };
 
-AbsProduct::~AbsProduct() {}
+inline AbsProduct::~AbsProduct() = default;
 
 class AbsFactory {
  public:
@@ -22,6 +22,6 @@ class AbsFactory {
   AbsFactory() {}
 };
 
-AbsFactory::~AbsFactory() {}
+inline AbsFactory::~AbsFactory() {}
 
 #endif

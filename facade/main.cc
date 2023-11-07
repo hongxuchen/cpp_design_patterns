@@ -1,6 +1,6 @@
 #include "datetimeprinter.hh"
 
-int main(void) {
+int main() {
   DateTimePrinter printer;
   printer.print();
 

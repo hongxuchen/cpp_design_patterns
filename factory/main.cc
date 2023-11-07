@@ -1,7 +1,9 @@
+#include "abs_factory.hh"
 #include "f1.hh"
 #include "f2.hh"
+#include <memory>
 
-int main(void) {
+int main() {
   AbsFactory *factory = nullptr;
   std::shared_ptr<AbsProduct> p;
   F1 f1;

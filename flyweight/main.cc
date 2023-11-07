@@ -13,5 +13,5 @@ int main() {
   fw.getFlyWeight("Jackill")->operate("1");
   fw.getFlyWeight("Rukawa")->operate("2");
   fw.getFlyWeight("Jackill")->operate("3");
-  assert(fw.size() == 2u);
+  assert(fw.size() == 2U);
 }

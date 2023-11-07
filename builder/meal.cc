@@ -1,10 +1,12 @@
 #include "meal.hh"
+
+#include <cstddef>
 #include <iostream>
 
 void Meal::serveMeal() {
   std::size_t i = 0;
   while (!mean_.empty()) {
-    std::cout << " Serve item " << ++i << ":" << mean_.front() << std::endl;
+    std::cout << " Serve item " << ++i << ":" << mean_.front() << '\n';
     mean_.pop();
   }
 }

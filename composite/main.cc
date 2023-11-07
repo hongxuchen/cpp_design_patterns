@@ -1,28 +1,28 @@
 #include "composite.hh"
-#include <iostream>
+#include <memory>
 
-int main(void) {
-  ComponentPtr pRoot = nullptr;
+int main() {
+  ComponentPtr p_root = nullptr;
 
-  pRoot = std::make_shared<Composite>();
+  p_root = std::make_shared<Composite>();
 
-  pRoot->add(std::make_shared<Leaf>());
+  p_root->add(std::make_shared<Leaf>());
 
-  ComponentPtr pLeaf1 = std::make_shared<Leaf>();
-  ComponentPtr pLeaf2 = std::make_shared<Leaf>();
+  ComponentPtr const p_leaf1 = std::make_shared<Leaf>();
+  ComponentPtr const p_leaf2 = std::make_shared<Leaf>();
 
-  pLeaf1->add(pLeaf2);
-  pLeaf1->remove(pLeaf2);
-  pLeaf1->operate();
+  p_leaf1->add(p_leaf2);
+  p_leaf1->remove(p_leaf2);
+  p_leaf1->operate();
 
-  ComponentPtr pCom = std::make_shared<Composite>();
-  pCom->add(pLeaf1);
-  pCom->add(pLeaf2);
-  pCom->operate();
+  ComponentPtr const p_com = std::make_shared<Composite>();
+  p_com->add(p_leaf1);
+  p_com->add(p_leaf2);
+  p_com->operate();
 
-  pRoot->add(pCom);
-  pRoot->operate();
-  pRoot->remove(pCom);
+  p_root->add(p_com);
+  p_root->operate();
+  p_root->remove(p_com);
 
   return 0;
 }

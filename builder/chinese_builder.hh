@@ -6,12 +6,12 @@
 // Concrete Meal Builder 2
 class ChineeseMealBuilder final : public MealBuilder {
  public:
-  ChineeseMealBuilder() {}
-  ~ChineeseMealBuilder() {}
+  ChineeseMealBuilder() = default;
+  ~ChineeseMealBuilder() override = default;
 
-  virtual void buildStarter() override { meal_.setMealItem("Manchurian"); }
-  virtual void buildMainCourse() override { meal_.setMealItem("FriedNoodles"); }
-  virtual void buildDessert() override { meal_.setMealItem("MangoPudding"); }
+  void buildStarter() override { meal_.setMealItem("Manchurian"); }
+  void buildMainCourse() override { meal_.setMealItem("FriedNoodles"); }
+  void buildDessert() override { meal_.setMealItem("MangoPudding"); }
 };
 
 #endif

@@ -1,6 +1,7 @@
 #include "composite.hh"
-#include <iostream>
 #include <algorithm>
+#include <cstddef>
+#include <iostream>
 
 void Component::add(ComponentPtr) {
   std::cout << __PRETTY_FUNCTION__ << "[DO NOTHING]\n";

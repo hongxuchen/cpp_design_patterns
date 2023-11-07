@@ -1,6 +1,8 @@
 #include "waiter.hh"
-#include "command.hh"
+
 #include <iostream>
+
+#include "command.hh"
 
 void Waiter::setCmd(Command* cmd) {
   cmds_.push_back(cmd);
@@ -8,5 +10,5 @@ void Waiter::setCmd(Command* cmd) {
 }
 
 void Waiter::notify() {
-  for (auto cmd : cmds_) cmd->ExecuteCmd();
+  for (auto* cmd : cmds_) cmd->ExecuteCmd();
 }

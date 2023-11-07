@@ -6,8 +6,8 @@
 
 class ConFlyweight : public FlyWeight {
  public:
-  ConFlyweight(std::string const& insState);
-  void operate(std::string const& exState);
+  ConFlyweight(std::string const& ins_state);
+  void operate(std::string const& ex_state);
 };
 
 #endif

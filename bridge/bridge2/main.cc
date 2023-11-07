@@ -1,10 +1,8 @@
-#include <iostream>
-
 #include "circle.hh"
 #include "d1.hh"
 #include "d2.hh"
 
-int main(void) {
+int main() {
   DrawingAPI1 dap1;
   DrawingAPI2 dap2;
   CircleShape circle1(1, 2, 3, &dap1);

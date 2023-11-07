@@ -3,7 +3,7 @@
 #include "op1.hh"
 #include "op2.hh"
 
-int main(void) {
+int main() {
   auto op1 = std::make_unique<Operator1>();
   auto op2 = std::make_unique<Operator2>();
   Decider s;

@@ -1,13 +1,14 @@
 #include "telephone.hh"
 #include <iostream>
+#include <utility>
 
 std::ostream &operator<<(std::ostream &os, Telephone &phone) {
   os << "phone[" << phone.num() << "]";
   return os;
 }
 
-Telephone::Telephone(int phoneNum, MediatorPtr m)
-    : num_(phoneNum), mediator_(m) {
+Telephone::Telephone(int phone_num, MediatorPtr m)
+    : num_(phone_num), mediator_(std::move(std::move(m))) {
   mediator_->add(this);
 }
 

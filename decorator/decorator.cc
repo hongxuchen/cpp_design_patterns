@@ -1,9 +1,12 @@
 #include "decorator.hh"
+#include "component.hh"
+
 #include <iostream>
+#include <utility>
 
-Decorator::Decorator(ComponentPtr com) { com_ = com; }
+Decorator::Decorator(ComponentPtr com) : com_(std::move(std::move(com))) {}
 
-void Decorator::SetComponent(ComponentPtr com) { com_ = com; }
+void Decorator::SetComponent(ComponentPtr com) { com_ = std::move(com); }
 
 Decorator::~Decorator() {
   std::cout << __PRETTY_FUNCTION__ << " DELETION\n";
@@ -11,7 +14,7 @@ Decorator::~Decorator() {
   com_ = nullptr;
 }
 
-ConcreteDecoratorA::ConcreteDecoratorA(ComponentPtr com) : Decorator(com) {}
+ConcreteDecoratorA::ConcreteDecoratorA(ComponentPtr com) : Decorator(std::move(com)) {}
 
 ConcreteDecoratorA::~ConcreteDecoratorA() {
   std::cout << __PRETTY_FUNCTION__ << "\n";
@@ -26,7 +29,7 @@ void ConcreteDecoratorA::AddBehavorA() {
   std::cout << __PRETTY_FUNCTION__ << "\n";
 }
 
-ConcreteDecoratorB::ConcreteDecoratorB(ComponentPtr com) : Decorator(com) {}
+ConcreteDecoratorB::ConcreteDecoratorB(ComponentPtr com) : Decorator(std::move(com)) {}
 
 ConcreteDecoratorB::~ConcreteDecoratorB() {
   std::cout << __PRETTY_FUNCTION__ << "\n";
@@ -41,7 +44,7 @@ void ConcreteDecoratorB::AddBehavorB() {
   std::cout << __PRETTY_FUNCTION__ << "\n";
 }
 
-ConcreteDecoratorC::ConcreteDecoratorC(ComponentPtr com) : Decorator(com) {}
+ConcreteDecoratorC::ConcreteDecoratorC(ComponentPtr com) : Decorator(std::move(com)) {}
 
 ConcreteDecoratorC::~ConcreteDecoratorC() {
   std::cout << __PRETTY_FUNCTION__ << "\n";
@@ -56,7 +59,7 @@ void ConcreteDecoratorC::AddBehavorC() {
   std::cout << __PRETTY_FUNCTION__ << "\n";
 }
 
-ConcreteDecoratorD::ConcreteDecoratorD(ComponentPtr com) : Decorator(com) {}
+ConcreteDecoratorD::ConcreteDecoratorD(ComponentPtr com) : Decorator(std::move(com)) {}
 
 ConcreteDecoratorD::~ConcreteDecoratorD() {
   std::cout << __PRETTY_FUNCTION__ << "\n";

@@ -1,5 +1,6 @@
 #include "states.hh"
 #include "tank.hh"
+#include <iostream>
 
 void AttackState::move(int x, int y) {
   std::cout << pTank->id() << " can't move to (" << x << ", " << y << ")\n";

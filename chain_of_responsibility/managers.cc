@@ -1,4 +1,6 @@
 #include "managers.hh"
+#include "request.hh"
+
 #include <iostream>
 
 void CommonManager::getRequest(Request const& request) {

@@ -19,7 +19,7 @@ class ConcreteDecoratorA : public Decorator {
   ConcreteDecoratorA(ComponentPtr com);
   ~ConcreteDecoratorA();
   virtual void Operation() override;
-  void AddBehavorA();
+  static void AddBehavorA();
 };
 
 class ConcreteDecoratorB : public Decorator {
@@ -27,7 +27,7 @@ class ConcreteDecoratorB : public Decorator {
   ConcreteDecoratorB(ComponentPtr com);
   ~ConcreteDecoratorB();
   virtual void Operation() override;
-  void AddBehavorB();
+  static void AddBehavorB();
 };
 
 class ConcreteDecoratorC : public Decorator {
@@ -35,7 +35,7 @@ class ConcreteDecoratorC : public Decorator {
   ConcreteDecoratorC(ComponentPtr com);
   ~ConcreteDecoratorC();
   virtual void Operation();
-  void AddBehavorC();
+  static void AddBehavorC();
 };
 
 class ConcreteDecoratorD : public Decorator {
@@ -43,8 +43,7 @@ class ConcreteDecoratorD : public Decorator {
   ConcreteDecoratorD(ComponentPtr com);
   ~ConcreteDecoratorD();
   virtual void Operation() override;
-  void AddBehavorD();
+  static void AddBehavorD();
 };
-
 
 #endif

@@ -1,10 +1,11 @@
 #include "timeprinter.hh"
-#include <iostream>
+
+#include <cstdlib>
 #include <ctime>
-#include <stdlib.h>
+#include <iostream>
 
 void TimePrinter::printTime() {
-  time_t now = time(nullptr);
+  time_t const now = time(nullptr);
   char date[128] = {
       0,
   };

@@ -1,10 +1,11 @@
 #ifndef OBJECT_ADAPTER_HPP
 #define OBJECT_ADAPTER_HPP
 
-#include "target.hh"
-#include "adaptee.hh"
 #include <iostream>
 #include <memory>
+
+#include "adaptee.hh"
+#include "target.hh"
 
 // composition
 class ObjectAdapter final : public Target {
@@ -13,8 +14,8 @@ class ObjectAdapter final : public Target {
   /// ObjectAdapter(Adaptee *adaptee) = delete;
 
   ObjectAdapter() : adaptee_(std::make_shared<Adaptee>()) {}
-  ~ObjectAdapter() {}
-  virtual void Request() override {
+  ~ObjectAdapter() override = default;
+  void Request() override {
     adaptee_->SpecificRequest();
     std::cout << __PRETTY_FUNCTION__ << "\n";
   }

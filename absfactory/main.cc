@@ -1,15 +1,14 @@
 #include "negative_lower_factory.hh"
 #include "positive_upper_factory.hh"
-#include <memory>
 
-int main(void) {
-  PositiveUpperFactory positiveUpperFactory;
-  NegativeLowerFactory negativeLowerFactory;
+int main() {
+  PositiveUpperFactory positive_upper_factory;
+  NegativeLowerFactory negative_lower_factory;
 
-  auto p1 = positiveUpperFactory.createNum();
-  auto p2 = positiveUpperFactory.createChar();
-  auto p3 = negativeLowerFactory.createNum();
-  auto p4 = negativeLowerFactory.createChar();
+  auto p1 = positive_upper_factory.createNum();
+  auto p2 = positive_upper_factory.createChar();
+  auto p3 = negative_lower_factory.createNum();
+  auto p4 = negative_lower_factory.createChar();
 
   p1->printNum();
   p2->printChar();

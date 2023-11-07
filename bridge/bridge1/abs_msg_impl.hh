@@ -4,7 +4,7 @@
 class AbsMessageImpl {
 
  public:
-  virtual ~AbsMessageImpl() {}
+  virtual ~AbsMessageImpl() = default;
   virtual void sendMessage() = 0;
 
  protected:

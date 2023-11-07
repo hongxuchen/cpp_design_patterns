@@ -3,7 +3,7 @@
 
 class TimePrinter {
  public:
-  void printTime();
+  static void printTime();
 };
 
 #endif

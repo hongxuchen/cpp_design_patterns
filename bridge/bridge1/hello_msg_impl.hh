@@ -1,16 +1,16 @@
 #ifndef _HELLOMESSAGEIMPL_H
 #define _HELLOMESSAGEIMPL_H
 
+#include <cstdio>
+
 #include "abs_msg_impl.hh"
-#include <stdio.h>
 
 class HelloMessageImpl final : public AbsMessageImpl {
-
  public:
-  HelloMessageImpl() {}
-  virtual ~HelloMessageImpl() {}
+  HelloMessageImpl() = default;
+  ~HelloMessageImpl() override = default;
 
-  virtual void sendMessage() { printf("Hello\n"); }
+  void sendMessage() override { printf("Hello\n"); }
 };
 
 #endif

@@ -12,7 +12,7 @@ class Mediator {
   virtual ~Mediator();
 
   void add(Telephone* t);
-  void dialTo(Telephone* t, int num);
+  void dialTo(Telephone* from, int num);
 
  private:
   std::vector<Telephone*> phones_;

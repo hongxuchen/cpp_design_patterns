@@ -5,7 +5,7 @@
 #include <cstdlib>
 
 void DatePrinter::printDate() {
-  time_t now = time(nullptr);
+  time_t const now = time(nullptr);
   char date[128] = {
       0,
   };

@@ -1,13 +1,13 @@
 #include "mediator.hh"
 
-Mediator::Mediator() {}
+Mediator::Mediator() = default;
 
-Mediator::~Mediator() {}
+Mediator::~Mediator() = default;
 
 void Mediator::add(Telephone* t) { phones_.push_back(t); }
 
 void Mediator::dialTo(Telephone* from, int num) {
-  for (std::size_t i = 0; i < phones_.size(); ++i) {
-    if (phones_[i]->num() == num) phones_[i]->onCallReceive(from->num());
+  for (auto & phone : phones_) {
+    if (phone->num() == num) phone->onCallReceive(from->num());
   }
 }

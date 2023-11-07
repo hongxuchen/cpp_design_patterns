@@ -1,6 +1,6 @@
 #include "singleton.hh"
 
-int main(void) {
+int main() {
   Single &single = Single::getInstance();
   single.dump();
   return 0;

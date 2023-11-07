@@ -6,7 +6,7 @@
 class AbsMsgSender {
 
  public:
-  virtual ~AbsMsgSender() {}
+  virtual ~AbsMsgSender() = default;
 
   virtual void sendMessage() = 0;
   virtual void setMessage(AbsMessageImpl* impl) = 0;

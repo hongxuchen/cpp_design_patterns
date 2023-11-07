@@ -16,8 +16,8 @@ class ConcreteCommand final : public Command {
  public:
   ConcreteCommand(Receiver* recv) { recv_ = recv; }
 
-  ~ConcreteCommand();
-  virtual void Execute() override;
+  ~ConcreteCommand() override;
+  void Execute() override;
 
  private:
   Receiver* recv_;

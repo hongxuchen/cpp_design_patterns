@@ -1,16 +1,16 @@
 #ifndef BYEMESSAGEIMPL_H
 #define BYEMESSAGEIMPL_H
 
+#include <cstdio>
+
 #include "abs_msg_impl.hh"
-#include <stdio.h>
 
 class ByeMessageImpl final : public AbsMessageImpl {
-
  public:
-  ByeMessageImpl() {}
-  virtual ~ByeMessageImpl() {}
+  ByeMessageImpl() = default;
+  ~ByeMessageImpl() override {}
 
-  virtual void sendMessage() { printf("Goodbye\n"); }
+  void sendMessage() override { printf("Goodbye\n"); }
 };
 
 #endif

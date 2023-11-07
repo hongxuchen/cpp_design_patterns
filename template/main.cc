@@ -4,7 +4,7 @@
 #include "tea.hh"
 
 
-int main(void) {
+int main() {
     std::cout << "coffee\n";
     Coffee c;
     c.PrepareRecipe();

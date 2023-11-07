@@ -21,30 +21,30 @@ struct Bear : public Animal<Bear> {};
 
 struct PrintVisitor : public Visitor {
   void Visit(Bird*) override {
-    cout << "[print] bird!" << endl;
+    cout << "[print] bird!" << '\n';
   };
   void Visit(Bear*) override {
-    cout << "[print] bear!" << endl;
+    cout << "[print] bear!" << '\n';
   };
 };
 
 struct DumpVisitor : public Visitor {
   void Visit(Bird*) override {
-    cout << "[dump] bird!" << endl;
+    cout << "[dump] bird!" << '\n';
   };
   void Visit(Bear*) override {
-    cout << "[dump] bear!" << endl;
+    cout << "[dump] bear!" << '\n';
   };
 };
 
-int main(void) {
+int main() {
   Bear bear;
   Bird bird;
 
   PrintVisitor v1;
   DumpVisitor v2;
 
-  std::vector<Visitor*> visitors{&v1, &v2};
+  std::vector<Visitor*> const visitors{&v1, &v2};
 
   for (auto&& visitor : visitors) {
     bear.Accept(visitor);

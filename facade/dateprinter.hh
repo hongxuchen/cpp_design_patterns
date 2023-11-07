@@ -3,7 +3,7 @@
 
 class DatePrinter {
  public:
-  void printDate();
+  static void printDate();
 };
 
 #endif

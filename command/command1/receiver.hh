@@ -5,7 +5,7 @@ class Receiver {
  public:
   Receiver() = default;
   ~Receiver() = default;
-  void Action();
+  static void Action();
 };
 
 #endif

@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.6)
 project(design_pattern C CXX)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+
 SET(PATTERN_DIR_LIST
   factory
   absfactory

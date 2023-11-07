@@ -8,7 +8,7 @@ class DecoratorOnlyOne : public Component {
   DecoratorOnlyOne(ComponentPtr com);
   ~DecoratorOnlyOne();
   virtual void Operation() override;
-  void AddBehavor();
+  static void AddBehavor();
 
  private:
   ComponentPtr com_;

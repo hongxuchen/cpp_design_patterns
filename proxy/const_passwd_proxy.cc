@@ -1,6 +1,7 @@
 #include "const_passwd_proxy.hh"
-char const* CONST_PASSWD = "1234";
+#include <string>
+char const* const_passwd = "1234";
 
 bool ConstPasswdProxy::verify(std::string const& passwd) {
-  return passwd == CONST_PASSWD;
+  return passwd == const_passwd;
 }

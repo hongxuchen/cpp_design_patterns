@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 #include "iterator.hh"
 #include "aggregator.hh"
