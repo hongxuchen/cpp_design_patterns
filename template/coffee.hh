@@ -4,11 +4,11 @@
 
 class Tea : public CaffeineBeverage<Tea> {
 public:
-    void Brew() {
-        std::cout << "brew tea" << std::endl;
+    static void Brew() {
+        std::cout << "brew tea" << '\n';
     }
 
-    void AddCondiments() {
-        std::cout << "add lemon" << std::endl;
+    static void AddCondiments() {
+        std::cout << "add lemon" << '\n';
     }
 };

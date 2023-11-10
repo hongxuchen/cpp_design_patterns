@@ -8,8 +8,8 @@ using ExprTy = int;
 class Context {
  public:
   Context(int num) : data_(num) {}
-  ExprTy data() { return data_; }
-  void setData(ExprTy d) { data_ = d; }
+  ExprTy Data() const { return data_; }
+  void SetData(ExprTy d) { data_ = d; }
 
  private:
   ExprTy data_;

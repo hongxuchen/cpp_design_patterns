@@ -5,13 +5,13 @@
 
 class Component {
  public:
-  virtual ~Component() {}
+  virtual ~Component() = default;
   virtual void Operation() = 0;
 
  protected:
-  Component() {}
+  Component() = default;
 };
 
-typedef std::shared_ptr<Component> ComponentPtr;
+using ComponentPtr = std::shared_ptr<Component>;
 
 #endif

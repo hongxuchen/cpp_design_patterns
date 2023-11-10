@@ -1,9 +1,10 @@
+#include <iostream>
+#include <memory>
+
 #include "component.hh"
 #include "concrete_component.hh"
 #include "decorator.hh"
 #include "one_decorator.hh"
-#include <iostream>
-#include <memory>
 
 int main() {
   {
@@ -14,7 +15,9 @@ int main() {
     p_com = std::make_shared<ConcreteDecoratorD>(p_com);
     p_com->Operation();
   }
+
   std::cout << "\n---\n\n";
+
   {
     ComponentPtr p_com1 = nullptr;
     p_com1 = std::make_shared<ConcreteComponent>();
@@ -26,5 +29,6 @@ int main() {
     p_com1 = std::make_shared<DecoratorOnlyOne>(p_com1);
     p_com1 = std::make_shared<ConcreteComponent>();
   }
+
   return 0;
 }

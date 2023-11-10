@@ -7,43 +7,43 @@ class Decorator : public Component {
  public:
   Decorator(ComponentPtr com);
   void SetComponent(ComponentPtr com);
-  virtual ~Decorator();
-  virtual void Operation() {}
+  ~Decorator() override;
+  void Operation() override {}
 
  protected:
-  ComponentPtr com_;
+  ComponentPtr com;
 };
 
 class ConcreteDecoratorA : public Decorator {
  public:
   ConcreteDecoratorA(ComponentPtr com);
-  ~ConcreteDecoratorA();
-  virtual void Operation() override;
-  static void AddBehavorA();
+  ~ConcreteDecoratorA() override;
+  void Operation() override;
+  void AddBehavorA();
 };
 
 class ConcreteDecoratorB : public Decorator {
  public:
   ConcreteDecoratorB(ComponentPtr com);
-  ~ConcreteDecoratorB();
-  virtual void Operation() override;
-  static void AddBehavorB();
+  ~ConcreteDecoratorB() override;
+  void Operation() override;
+  void AddBehavorB();
 };
 
 class ConcreteDecoratorC : public Decorator {
  public:
   ConcreteDecoratorC(ComponentPtr com);
-  ~ConcreteDecoratorC();
-  virtual void Operation();
-  static void AddBehavorC();
+  ~ConcreteDecoratorC() override;
+  void Operation() override;
+  void AddBehavorC();
 };
 
 class ConcreteDecoratorD : public Decorator {
  public:
   ConcreteDecoratorD(ComponentPtr com);
-  ~ConcreteDecoratorD();
-  virtual void Operation() override;
-  static void AddBehavorD();
+  ~ConcreteDecoratorD() override;
+  void Operation() override;
+  void AddBehavorD();
 };
 
 #endif

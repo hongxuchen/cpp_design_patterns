@@ -7,8 +7,8 @@
 
 class Meal {
  public:
-  void setMealItem(std::string&& mealItem) { mean_.push(std::move(mealItem)); }
-  void serveMeal();
+  void SetMealItem(std::string&& meal_item) { mean_.push(std::move(meal_item)); }
+  void ServeMeal();
 
  private:
   std::queue<std::string> mean_;

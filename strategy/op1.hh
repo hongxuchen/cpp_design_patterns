@@ -7,7 +7,7 @@
 
 class Operator1 : public Operator {
  public:
-  virtual void transform(unsigned seed) override {
+  void Transform(unsigned seed) override {
     std::cout << "sstream transform: ";
     std::stringstream sstream;
     sstream << std::oct << seed;

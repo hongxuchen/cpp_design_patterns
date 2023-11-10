@@ -7,13 +7,13 @@ int main() {
   CharMessageSender char_msg_sender;
   AbsMsgSender *sender = &char_msg_sender;
 
-  HelloMessageImpl hello;
-  ByeMessageImpl bye;
+  auto hello = std::make_shared<HelloMessageImpl>();
+  sender->SetMessage(hello);
+  sender->SendMessage();
 
-  sender->setMessage(&hello);
-  sender->sendMessage();
-  sender->setMessage(&bye);
-  sender->sendMessage();
+  auto bye = std::make_shared<ByeMessageImpl>();
+  sender->SetMessage(bye);
+  sender->SendMessage();
 
   return 0;
 }

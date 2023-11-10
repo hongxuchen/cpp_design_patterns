@@ -10,9 +10,9 @@ int main() {
   std::unique_ptr<Command> const cmd2 = std::make_unique<MakeChickenWingCmd>(&cook);
   Waiter waiter;
 
-  waiter.setCmd(cmd1.get());
-  waiter.setCmd(cmd2.get());
+  waiter.SetCmd(cmd1.get());
+  waiter.SetCmd(cmd2.get());
 
-  waiter.notify();
+  waiter.Notify();
   return 0;
 }

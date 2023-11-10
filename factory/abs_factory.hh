@@ -16,7 +16,7 @@ inline AbsProduct::~AbsProduct() = default;
 class AbsFactory {
  public:
   virtual ~AbsFactory() = 0;
-  virtual std::shared_ptr<AbsProduct> createProduct() = 0;
+  virtual std::unique_ptr<AbsProduct> CreateProduct() = 0;
 
  protected:
   AbsFactory() {}

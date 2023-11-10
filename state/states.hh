@@ -5,36 +5,36 @@
 
 class State {
  public:
-  virtual void move(int x, int y) = 0;
-  virtual void attack() = 0;
+  virtual void Move(int x, int y) = 0;
+  virtual void Attack() = 0;
 };
 
 class Tank;
 
 class AttackState : public State {
  public:
-  AttackState(Tank *pTank) : pTank(pTank) {}
+  AttackState(Tank *p_tank) : pTank_(p_tank) {}
 
-  virtual void move(int x, int y) override;
-  virtual void attack(void) override;
+  void Move(int x, int y) override;
+  void Attack() override;
 
   virtual ~AttackState();
 
  private:
-  Tank *pTank;
+  Tank *pTank_;
 };
 
 class MoveState : public State {
  public:
-  MoveState(Tank *pTank) : pTank(pTank) {}
+  MoveState(Tank *p_tank) : pTank_(p_tank) {}
 
-  virtual void move(int x, int y) override;
-  virtual void attack(void) override;
+  void Move(int x, int y) override;
+  void Attack() override;
 
   virtual ~MoveState();
 
  private:
-  Tank *pTank;
+  Tank *pTank_;
 };
 
 #endif

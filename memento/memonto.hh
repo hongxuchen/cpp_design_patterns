@@ -11,8 +11,8 @@ class Memento {
  public:
   Memento() = default;
   Memento(std::string const &state) { state_ = state; }
-  std::string state() { return state_; }
-  void setState(std::string const &state) { state_ = state; }
+  std::string State() { return state_; }
+  void SetState(std::string const &state) { state_ = state; }
 };
 
 #endif

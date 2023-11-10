@@ -1,7 +1,7 @@
 #include "singleton.hh"
 
 int main() {
-  Single &single = Single::getInstance();
-  single.dump();
+  Single &single = Single::GetInstance();
+  single.Dump();
   return 0;
 }

@@ -9,10 +9,10 @@ class Decider {
 
  public:
   Decider() = default;
-  void setOp(Operator* op) { op_ = op; }
-  void transform(unsigned seed) {
+  void SetOp(Operator* op) { op_ = op; }
+  void Transform(unsigned seed) {
     assert(op_ != nullptr);
-    op_->transform(seed);
+    op_->Transform(seed);
   }
 };
 

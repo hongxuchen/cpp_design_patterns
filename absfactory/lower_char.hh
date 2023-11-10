@@ -1,14 +1,15 @@
-#ifndef LOWER_CHAR_H 
-#define LOWER_CHAR_H 
+#ifndef LOWER_CHAR_H
+#define LOWER_CHAR_H
+
+#include <cstdio>
 
 #include "abs_char.hh"
-#include <stdio.h>
 
 class LowerChar : public AbsChar {
  public:
-  LowerChar() {}
-  virtual ~LowerChar() {}
-  void printChar() override { printf("hello lower!\n"); }
+  LowerChar() = default;
+  ~LowerChar() override = default;
+  void PrintChar() override { printf("hello lower!\n"); }
 };
 
 #endif

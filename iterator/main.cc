@@ -5,12 +5,12 @@
 
 int main() {
   Aggregator<int> aggr;
-  aggr.push_back(1);
-  aggr.push_back(2);
-  aggr.push_back(3);
+  aggr.PushBack(1);
+  aggr.PushBack(2);
+  aggr.PushBack(3);
   auto it = MyIterator<decltype(aggr)>(aggr);
 
-  for (it.first(); !it.isDone(); ++it) {
+  for (it.First(); !it.IsDone(); ++it) {
     std::cout << *it << '\n';
   }
   return 0;

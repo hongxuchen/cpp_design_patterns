@@ -7,14 +7,14 @@
 
 class Mediator;
 
-typedef std::shared_ptr<Mediator> MediatorPtr;
+using MediatorPtr = std::shared_ptr<Mediator>;
 
 class Telephone {
  public:
   Telephone(int phone_num, MediatorPtr m);
-  void dial(int phoneNum);
-  int num() const { return num_; }
-  void onCallReceive(int incommingNum);
+  void Dial(int phone_num);
+  int Num() const { return num_; }
+  void OnCallReceive(int incomming_num);
 
  private:
   int num_;

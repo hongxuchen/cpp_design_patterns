@@ -8,7 +8,7 @@ ConFlyweight::ConFlyweight(std::string const& ins_state) : FlyWeight(ins_state) 
   std::cout << "ConFlyweight Build " << ins_state << '\n';
 }
 
-void ConFlyweight::operate(std::string const& ex_state) {
-  std::cout << __PRETTY_FUNCTION__ << ": [" << insState_ << ", " << ex_state
+void ConFlyweight::Operate(std::string const& ex_state) {
+  std::cout << __PRETTY_FUNCTION__ << ": [" << ins_state << ", " << ex_state
             << "]\n";
 }

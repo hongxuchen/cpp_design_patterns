@@ -9,9 +9,9 @@ class ChineeseMealBuilder final : public MealBuilder {
   ChineeseMealBuilder() = default;
   ~ChineeseMealBuilder() override = default;
 
-  void buildStarter() override { meal_.setMealItem("Manchurian"); }
-  void buildMainCourse() override { meal_.setMealItem("FriedNoodles"); }
-  void buildDessert() override { meal_.setMealItem("MangoPudding"); }
+  void BuildStarter() override { meal.SetMealItem("Manchurian"); }
+  void BuildMainCourse() override { meal.SetMealItem("FriedNoodles"); }
+  void BuildDessert() override { meal.SetMealItem("MangoPudding"); }
 };
 
 #endif

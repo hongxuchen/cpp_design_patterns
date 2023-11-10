@@ -11,8 +11,8 @@ class Mediator {
   Mediator();
   virtual ~Mediator();
 
-  void add(Telephone* t);
-  void dialTo(Telephone* from, int num);
+  void Add(Telephone* t);
+  void DialTo(Telephone* from, int num);
 
  private:
   std::vector<Telephone*> phones_;

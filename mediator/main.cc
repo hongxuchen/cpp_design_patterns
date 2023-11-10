@@ -8,8 +8,8 @@ int main() {
   Telephone p1(111, mediator);
   Telephone p2(222, mediator);
 
-  p1.dial(222);
-  p2.dial(111);
+  p1.Dial(222);
+  p2.Dial(111);
 
   return 0;
 }

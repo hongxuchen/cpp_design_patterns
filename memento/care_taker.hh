@@ -9,8 +9,8 @@ class Caretaker {
   Memento memento_;
 
  public:
-  Memento &memnto() { return memento_; }
-  void setMemento(Memento const &memento) { memento_ = memento; }
+  Memento &Memnto() { return memento_; }
+  void SetMemento(Memento const &memento) { memento_ = memento; }
 };
 
 #endif

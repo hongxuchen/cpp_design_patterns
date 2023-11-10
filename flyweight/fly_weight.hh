@@ -5,12 +5,12 @@
 
 class FlyWeight {
  public:
-  virtual void operate(std::string const& exState) = 0;
-  std::string insState() { return insState_; }
+  virtual void Operate(std::string const& ex_state) = 0;
+  std::string InsState() { return ins_state; }
 
  protected:
-  FlyWeight(std::string const& insState) { insState_ = insState; }
-  std::string insState_;
+  FlyWeight(std::string const& ins_state) : ins_state(ins_state) {}
+  std::string ins_state;
 };
 
 #endif

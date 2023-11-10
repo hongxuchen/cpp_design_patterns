@@ -4,10 +4,10 @@
 #include <memory>
 #include <string>
 
-FlyWeightFactory::FlyWeightPtr FlyWeightFactory::getFlyWeight(
+FlyWeightFactory::FlyWeightPtr FlyWeightFactory::GetFlyWeight(
     std::string const& key) {
   for (auto & it : fly_) {
-    if (it->insState() == key) {
+    if (it->InsState() == key) {
       std::cout << "Created\n";
       return it;
     }

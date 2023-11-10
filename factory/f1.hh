@@ -11,10 +11,10 @@ class P1 : public AbsProduct {
   ~P1() override = default;
 };
 
-class F1 final : public AbsFactory {
+class F1 : public AbsFactory {
  public:
-  std::shared_ptr<AbsProduct> createProduct() override {
-    return std::make_shared<P1>(P1());
+  std::unique_ptr<AbsProduct> CreateProduct() override {
+    return std::make_unique<P1>(P1());
   }
   F1() = default;
   ~F1() override = default;

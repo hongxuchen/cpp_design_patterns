@@ -3,6 +3,7 @@
 *.a
 *.app
 build/
+bin/
 ### C ###
 ### C++ ###
 .cache/
@@ -63,7 +64,6 @@ Module.symvers
 *.pdb
 # Precompiled Headers
 # Prerequisites
-SETUP/
 # Shared objects (inc. Windows DLLs)
 *.slo
 *.smod

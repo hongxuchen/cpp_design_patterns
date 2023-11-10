@@ -4,8 +4,8 @@
 #include <cstdlib>
 #include <cstdio>
 
-void AddExpr::interpret(Context& context) {
-  ExprTy data = context.data();
+void AddExpr::Interpret(Context& context) {
+  ExprTy data = context.Data();
   data += add_;
-  context.setData(data);
+  context.SetData(data);
 }

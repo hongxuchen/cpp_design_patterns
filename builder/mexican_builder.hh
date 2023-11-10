@@ -5,11 +5,11 @@
 
 class MexicanMealBuilder final : public MealBuilder {
  public:
-  virtual void buildStarter() override { meal_.setMealItem("ChipsNSalsa"); }
-  virtual void buildMainCourse() override {
-    meal_.setMealItem("RiceTacoBeans");
+  void BuildStarter() override { meal.SetMealItem("ChipsNSalsa"); }
+  void BuildMainCourse() override {
+    meal.SetMealItem("RiceTacoBeans");
   }
-  virtual void buildDessert() override { meal_.setMealItem("FriedIcecream"); }
+  void BuildDessert() override { meal.SetMealItem("FriedIcecream"); }
 };
 
 #endif

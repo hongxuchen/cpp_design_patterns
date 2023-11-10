@@ -2,26 +2,31 @@
 #define OBJECT_ADAPTER_HPP
 
 #include <iostream>
-#include <memory>
+#include <utility>
 
 #include "adaptee.hh"
 #include "target.hh"
 
-// composition
+/// a adapter solution, by making `Adaptee` a member
 class ObjectAdapter final : public Target {
  public:
-  ObjectAdapter(std::shared_ptr<Adaptee> adaptee) { adaptee_ = adaptee; }
-  /// ObjectAdapter(Adaptee *adaptee) = delete;
+  // wrap `Adaptee` into ObjectAdapter
+  ObjectAdapter(Adaptee&& adaptee) : adaptee_(std::move(adaptee)){};
 
-  ObjectAdapter() : adaptee_(std::make_shared<Adaptee>()) {}
+  // or initialize with a default Adaptee (totally encapsulate it)
+  ObjectAdapter(int i, double j) : adaptee_(Adaptee(i, j)) {}
+
   ~ObjectAdapter() override = default;
+
   void Request() override {
-    adaptee_->SpecificRequest();
-    std::cout << __PRETTY_FUNCTION__ << "\n";
+    adaptee_.SpecificRequest();
+    // cannot directly get i/j of adaptee_
+    std::cout << __PRETTY_FUNCTION__ << " => (" << adaptee_.getI() << ", "
+              << adaptee_.getJ() << ")\n";
   }
 
  private:
-  std::shared_ptr<Adaptee> adaptee_;
+  Adaptee adaptee_;
 };
 
 #endif

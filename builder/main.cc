@@ -11,21 +11,21 @@ int main() {
 
   std::cout << "Build a Chineese Meal!" << '\n';
   auto builder = std::make_unique<ChineeseMealBuilder>();
-  cook.setMealBuilder(builder.get());
-  cook.createMeal();
+  cook.SetMealBuilder(builder.get());
+  cook.CreateMeal();
 
-  Meal chineese_meal = cook.getMeal();
-  chineese_meal.serveMeal();
+  Meal chineese_meal = cook.GetMeal();
+  chineese_meal.ServeMeal();
 
   std::cout << "\nBuild a Mexican Meal!" << '\n';
   auto mexican_builder = std::make_unique<MexicanMealBuilder>();
-  cook.setMealBuilder(mexican_builder.get());
+  cook.SetMealBuilder(mexican_builder.get());
   /// below is wrong
   /// cook.setMealBuilder(std::make_unique<MexicanMealBuilder>().get());
-  cook.createMeal();
+  cook.CreateMeal();
 
-  Meal mexican_meal = cook.getMeal();
-  mexican_meal.serveMeal();
+  Meal mexican_meal = cook.GetMeal();
+  mexican_meal.ServeMeal();
 
   return 0;
 }

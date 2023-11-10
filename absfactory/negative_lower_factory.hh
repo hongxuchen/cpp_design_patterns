@@ -1,20 +1,20 @@
 #ifndef NEGATIVE_LOWER_FACTORY_H
 #define NEGATIVE_LOWER_FACTORY_H
 
-#include "negative_num.hh"
-#include "lower_char.hh"
 #include "abs_factory.hh"
+#include "lower_char.hh"
+#include "negative_num.hh"
 
 class NegativeLowerFactory : public AbsFactory {
  public:
-  NegativeLowerFactory() {}
-  virtual ~NegativeLowerFactory() {}
+  NegativeLowerFactory() = default;
+  ~NegativeLowerFactory() override = default;
 
-  std::shared_ptr<AbsNum> createNum() override {
-    return std::make_shared<NegativeNum>(NegativeNum());
+  std::unique_ptr<AbsNum> CreateNum() override {
+    return std::make_unique<NegativeNum>(NegativeNum());
   }
-  std::shared_ptr<AbsChar> createChar() override {
-    return std::make_shared<LowerChar>(LowerChar());
+  std::unique_ptr<AbsChar> CreateChar() override {
+    return std::make_unique<LowerChar>(LowerChar());
   }
 };
 

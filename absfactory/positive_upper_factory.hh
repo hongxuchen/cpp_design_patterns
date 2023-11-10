@@ -7,14 +7,14 @@
 
 class PositiveUpperFactory : public AbsFactory {
  public:
-  PositiveUpperFactory() {}
-  virtual ~PositiveUpperFactory() {}
+  PositiveUpperFactory() = default;
+  ~PositiveUpperFactory() override = default;
 
-  virtual std::shared_ptr<AbsNum> createNum() override {
-    return std::make_shared<PositiveNum>(PositiveNum());
+  std::unique_ptr<AbsNum> CreateNum() override {
+    return std::make_unique<PositiveNum>(PositiveNum());
   }
-  virtual std::shared_ptr<AbsChar> createChar() override {
-    return std::make_shared<UpperChar>(UpperChar());
+  std::unique_ptr<AbsChar> CreateChar() override {
+    return std::make_unique<UpperChar>(UpperChar());
   }
 };
 

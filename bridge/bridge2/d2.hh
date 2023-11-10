@@ -7,7 +7,7 @@
 
 class DrawingAPI2 final : public DrawingAPI {
  public:
-  void drawCircle(double x, double y, double radius) override {
+  void DrawCircle(double x, double y, double radius) override {
     std::cout << "API2.circle at " << x << ':' << y << ' ' << radius << '\n';
   }
 };

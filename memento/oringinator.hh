@@ -10,10 +10,10 @@ class Originator {
   std::string state_;
 
  public:
-  std::string state() { return state_; }
-  void setState(std::string const &state) { state_ = state; }
-  Memento createMemento() { return Memento(state_); }
-  void restoreMemento(Memento &memento) { setState(memento.state()); }
+  std::string State() { return state_; }
+  void SetState(std::string const &state) { state_ = state; }
+  Memento CreateMemento() { return Memento(state_); }
+  void RestoreMemento(Memento &memento) { SetState(memento.State()); }
 };
 
 #endif

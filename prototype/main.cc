@@ -4,6 +4,6 @@
 
 int main() {
   std::shared_ptr<Prototype> const p = std::make_shared<ConcretePrototype>();
-  p->clone();
+  p->Clone();
   return 0;
 }

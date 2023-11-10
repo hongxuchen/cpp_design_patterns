@@ -33,9 +33,8 @@
 
 ``` bash
 cd /path/to/src
-DIR=$PWD
-mkdir $DIR/build && cd $DIR/build
-cmake $DIR
-make -j
-# then check executable inside $DIR/bin
+mkdir build/
+cmake -B build # or use ninja: cmake -B build -GNinja
+cmake --build build
+# then check executable inside bin/
 ```

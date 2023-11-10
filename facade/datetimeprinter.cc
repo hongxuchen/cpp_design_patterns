@@ -2,7 +2,7 @@
 
 DateTimePrinter::DateTimePrinter() : tp_(TimePrinter()), dp_(DatePrinter()) {}
 
-void DateTimePrinter::print() {
-  DatePrinter::printDate();
-  TimePrinter::printTime();
+void DateTimePrinter::Print() {
+  DatePrinter::PrintDate();
+  TimePrinter::PrintTime();
 }

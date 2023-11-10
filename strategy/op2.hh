@@ -7,11 +7,11 @@
 
 class Operator2 : public Operator {
  public:
-  virtual void transform(unsigned seed) override {
+  void Transform(unsigned seed) override {
     std::vector<unsigned short> str;
     unsigned temp;
     std::cout << "manual transform: ";
-    while (seed) {
+    while (seed != 0u) {
       temp = seed / 8;
       auto reminder = seed - temp * 8;
       str.push_back(reminder);

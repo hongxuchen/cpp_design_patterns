@@ -1,6 +1,7 @@
 #ifndef TARGET_HPP
 #define TARGET_HPP
 
+/// an "interface", which defines a `Request` method
 class Target {
  public:
   Target() = default;

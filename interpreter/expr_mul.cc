@@ -4,8 +4,8 @@
 #include <cstdlib>
 #include <cstdio>
 
-void MulExpr::interpret(Context& context) {
-  ExprTy data = context.data();
+void MulExpr::Interpret(Context& context) {
+  ExprTy data = context.Data();
   data *= mul_;
-  context.setData(data);
+  context.SetData(data);
 }

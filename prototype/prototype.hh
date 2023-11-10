@@ -5,8 +5,8 @@
 
 class Prototype {
  public:
-  virtual ~Prototype() {}
-  virtual std::shared_ptr<Prototype> clone() = 0;
+  virtual ~Prototype() = default;
+  virtual std::shared_ptr<Prototype> Clone() = 0;
 
  protected:
   Prototype() {}

@@ -2,17 +2,17 @@
 
 int main() {
   Tank tank("JUNGLE");
-  tank.enterTankMode();
-  tank.attack();
-  tank.move(1, 1);
+  tank.EnterTankMode();
+  tank.Attack();
+  tank.Move(1, 1);
 
-  tank.enterSiegeMode();
-  tank.attack();
-  tank.move(2, 2);
+  tank.EnterSiegeMode();
+  tank.Attack();
+  tank.Move(2, 2);
 
-  tank.enterTankMode();
-  tank.attack();
-  tank.move(3, 3);
+  tank.EnterTankMode();
+  tank.Attack();
+  tank.Move(3, 3);
 
   return 0;
 }

@@ -2,6 +2,7 @@
 #define F2_H
 
 #include <cstdio>
+#include <memory>
 
 #include "abs_factory.hh"
 
@@ -11,10 +12,10 @@ class P2 : public AbsProduct {
   ~P2() override = default;
 };
 
-class F2 final : public AbsFactory {
+class F2 : public AbsFactory {
  public:
-  std::shared_ptr<AbsProduct> createProduct() override {
-    return std::make_shared<P2>(P2());
+  std::unique_ptr<AbsProduct> CreateProduct() override {
+    return std::make_unique<P2>(P2());
   }
   F2() = default;
   ~F2() override = default;

@@ -3,22 +3,22 @@
 
 #include <iostream>
 
-void CommonManager::getRequest(Request const& request) {
-  if (request.num() >= 0 && request.num() < MaxMount::Common) {
-    std::cout << name_ << " handle: " << request.num() << '\n';
+void CommonManager::GetRequest(Request const& request) {
+  if (request.Num() >= 0 && request.Num() < MaxMount::kCommon) {
+    std::cout << name << " handle: " << request.Num() << '\n';
   } else {
-    mgr_->getRequest(request);
+    mgr->GetRequest(request);
   }
 }
 
-void MajorDomo::getRequest(Request const& request) {
-  if (request.num() <= MaxMount::Major) {
-    std::cout << name_ << " handle: " << request.num() << '\n';
+void MajorDomo::GetRequest(Request const& request) {
+  if (request.Num() <= MaxMount::kMajor) {
+    std::cout << name << " handle: " << request.Num() << '\n';
   } else {
-    mgr_->getRequest(request);
+    mgr->GetRequest(request);
   }
 }
 
-void GeneralManager::getRequest(Request const& request) {
-  std::cout << name_ << " handle: " << request.num() << '\n';
+void GeneralManager::GetRequest(Request const& request) {
+  std::cout << name << " handle: " << request.Num() << '\n';
 }

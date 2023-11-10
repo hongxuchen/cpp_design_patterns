@@ -3,20 +3,20 @@
 #include <utility>
 
 std::ostream &operator<<(std::ostream &os, Telephone &phone) {
-  os << "phone[" << phone.num() << "]";
+  os << "phone[" << phone.Num() << "]";
   return os;
 }
 
 Telephone::Telephone(int phone_num, MediatorPtr m)
     : num_(phone_num), mediator_(std::move(std::move(m))) {
-  mediator_->add(this);
+  mediator_->Add(this);
 }
 
-void Telephone::dial(int num) {
+void Telephone::Dial(int num) {
   std::cout << *this << " calls " << num << '\n';
-  mediator_->dialTo(this, num);
+  mediator_->DialTo(this, num);
 }
 
-void Telephone::onCallReceive(int num) {
+void Telephone::OnCallReceive(int num) {
   std::cout << *this << " answers " << num << '\n';
 }

@@ -1,8 +1,8 @@
 #include "datetimeprinter.hh"
 
 int main() {
-  DateTimePrinter printer;
-  printer.print();
+  DateTimePrinter const printer;
+  DateTimePrinter::Print();
 
   return 0;
 }

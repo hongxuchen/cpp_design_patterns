@@ -7,10 +7,10 @@
 
 class AbsFactory {
  public:
-  AbsFactory() {}
-  virtual ~AbsFactory() {}
-  virtual std::shared_ptr<AbsChar> createChar() = 0;
-  virtual std::shared_ptr<AbsNum> createNum() = 0;
+  AbsFactory() = default;
+  virtual ~AbsFactory() = default;
+  virtual std::unique_ptr<AbsChar> CreateChar() = 0;
+  virtual std::unique_ptr<AbsNum> CreateNum() = 0;
 };
 
 #endif

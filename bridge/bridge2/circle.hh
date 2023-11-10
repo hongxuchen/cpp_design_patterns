@@ -6,14 +6,14 @@
 
 class CircleShape : public Shape {
  public:
-  CircleShape(double x, double y, double radius, DrawingAPI *drawingAPI)
-      : m_x(x), m_y(y), m_radius(radius), m_drawingAPI(drawingAPI) {}
-  void draw() override { m_drawingAPI->drawCircle(m_x, m_y, m_radius); }
-  void resizeByPercentage(double pct) override { m_radius *= pct; }
+  CircleShape(double x, double y, double radius, DrawingAPI *drawing_api)
+      : m_x_(x), m_y_(y), m_radius_(radius), m_drawingAPI_(drawing_api) {}
+  void Draw() override { m_drawingAPI_->DrawCircle(m_x_, m_y_, m_radius_); }
+  void ResizeByPercentage(double pct) override { m_radius_ *= pct; }
 
  private:
-  double m_x, m_y, m_radius;
-  DrawingAPI *m_drawingAPI;
+  double m_x_, m_y_, m_radius_;
+  DrawingAPI *m_drawingAPI_;
 };
 
 #endif

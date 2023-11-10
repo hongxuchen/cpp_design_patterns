@@ -5,9 +5,9 @@
 
 class Expr {
  public:
-  virtual ~Expr() {}
+  virtual ~Expr() = default;
 
-  virtual void interpret(Context& context) = 0;
+  virtual void Interpret(Context& context) = 0;
 
  protected:
   Expr() {}

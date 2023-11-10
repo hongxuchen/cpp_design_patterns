@@ -5,7 +5,7 @@
 
 class PasswordProxy {
  public:
-  virtual bool verify(std::string const&) = 0;
+  virtual bool Verify(std::string const&) = 0;
 
  protected:
   virtual ~PasswordProxy() = default;

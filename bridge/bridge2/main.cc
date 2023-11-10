@@ -7,9 +7,9 @@ int main() {
   DrawingAPI2 dap2;
   CircleShape circle1(1, 2, 3, &dap1);
   CircleShape circle2(5, 7, 11, &dap2);
-  circle1.resizeByPercentage(2.5);
-  circle2.resizeByPercentage(2.5);
-  circle1.draw();
-  circle2.draw();
+  circle1.ResizeByPercentage(2.5);
+  circle2.ResizeByPercentage(2.5);
+  circle1.Draw();
+  circle2.Draw();
   return 0;
 }

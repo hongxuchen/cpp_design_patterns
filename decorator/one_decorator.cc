@@ -1,14 +1,14 @@
 #include "one_decorator.hh"
-#include "component.hh"
 
 #include <iostream>
 #include <utility>
 
-DecoratorOnlyOne::DecoratorOnlyOne(ComponentPtr com) : com_(std::move(std::move(com))) {}
+#include "component.hh"
+
+DecoratorOnlyOne::DecoratorOnlyOne(ComponentPtr com) : com_(std::move(com)) {}
 
 DecoratorOnlyOne::~DecoratorOnlyOne() {
   std::cout << __PRETTY_FUNCTION__ << " DELETION\n";
-  /// delete com_;
   com_ = nullptr;
 }
 
@@ -17,6 +17,6 @@ void DecoratorOnlyOne::Operation() {
   AddBehavor();
 }
 
-void DecoratorOnlyOne::AddBehavor() {
+void DecoratorOnlyOne::AddBehavor() {  // NOLINT
   std::cout << __PRETTY_FUNCTION__ << "\n";
 }

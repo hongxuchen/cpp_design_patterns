@@ -4,8 +4,8 @@
 class Shape {
  public:
   virtual ~Shape() = default;
-  virtual void draw() = 0;
-  virtual void resizeByPercentage(double pct) = 0;
+  virtual void Draw() = 0;
+  virtual void ResizeByPercentage(double pct) = 0;
 };
 
 #endif

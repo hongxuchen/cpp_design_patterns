@@ -8,9 +8,9 @@
 
 class FlyWeightFactory {
  public:
-  typedef std::shared_ptr<FlyWeight> FlyWeightPtr;
-  std::size_t size() { return fly_.size(); }
-  FlyWeightPtr getFlyWeight(std::string const& key);
+  using FlyWeightPtr = std::shared_ptr<FlyWeight>;
+  std::size_t Size() { return fly_.size(); }
+  FlyWeightPtr GetFlyWeight(std::string const& key);
 
  private:
   std::vector<FlyWeightPtr> fly_;

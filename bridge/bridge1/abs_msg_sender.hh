@@ -1,15 +1,18 @@
 #ifndef ABSMSGSENDER_H
 #define ABSMSGSENDER_H
 
+#include <memory>
+
 #include "abs_msg_impl.hh"
 
-class AbsMsgSender {
+using MsgTy = std::shared_ptr<AbsMessageImpl>;
 
+class AbsMsgSender {
  public:
   virtual ~AbsMsgSender() = default;
 
-  virtual void sendMessage() = 0;
-  virtual void setMessage(AbsMessageImpl* impl) = 0;
+  virtual void SendMessage() = 0;
+  virtual void SetMessage(MsgTy impl) = 0;
 
  protected:
   AbsMsgSender() {}

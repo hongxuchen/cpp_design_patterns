@@ -6,16 +6,16 @@
 class MealBuilder {
  public:
   virtual ~MealBuilder() = default;
-  Meal const& getMeal() { return meal_; }
+  Meal const& GetMeal() { return meal; }
 
-  virtual void buildStarter() = 0;
-  virtual void buildMainCourse() = 0;
-  virtual void buildDessert() = 0;
+  virtual void BuildStarter() = 0;
+  virtual void BuildMainCourse() = 0;
+  virtual void BuildDessert() = 0;
 
  protected:
   MealBuilder() {}
 
-  Meal meal_;
+  Meal meal;
 };
 
 #endif

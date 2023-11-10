@@ -1,20 +1,21 @@
 #ifndef CLASS_ADAPTER_HPP
 #define CLASS_ADAPTER_HPP
 
-#include "target.hh"
-#include "adaptee.hh"
 #include <iostream>
 
-// inheritance
+#include "adaptee.hh"
+#include "target.hh"
+
+// adapt by inheritance, C++ specific
 class ClassAdapter final : public Target, private Adaptee {
  public:
-  ClassAdapter() {}
-  ~ClassAdapter() {}
-  virtual void Request() override {
+  ClassAdapter(int i, double j) : Adaptee(i, j) {}
+  ~ClassAdapter() override = default;
+  void Request() override {
     SpecificRequest();
-    std::cout << __PRETTY_FUNCTION__ << "\n";
+    // i/j can be accessed directly
+    std::cout << __PRETTY_FUNCTION__ << " => (" << i << ", " << j << ")\n";
   }
 };
-
 
 #endif

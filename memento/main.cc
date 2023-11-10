@@ -6,12 +6,12 @@
 
 int main() {
   Originator originator;
-  originator.setState("state1");
-  std::cout << "original:\t" << originator.state() << '\n';
+  originator.SetState("state1");
+  std::cout << "original:\t" << originator.State() << '\n';
   Caretaker caretaker;
-  caretaker.setMemento(originator.createMemento());
-  originator.setState("state2");
-  std::cout << "changed:\t" << originator.state() << '\n';
-  originator.restoreMemento(caretaker.memnto());
-  std::cout << "recovered:\t" << originator.state() << '\n';
+  caretaker.SetMemento(originator.CreateMemento());
+  originator.SetState("state2");
+  std::cout << "changed:\t" << originator.State() << '\n';
+  originator.RestoreMemento(caretaker.Memnto());
+  std::cout << "recovered:\t" << originator.State() << '\n';
 }

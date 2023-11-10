@@ -3,7 +3,7 @@
 
 class Operator {
  public:
-  virtual void transform(unsigned seed) = 0;
+  virtual void Transform(unsigned seed) = 0;
 };
 
 #endif

@@ -31,7 +31,7 @@ SET(PATTERN_DIR_LIST
 
 add_definitions("-std=c++17 -Wall -Wextra -O3")
 
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 
 foreach(module ${PATTERN_DIR_LIST})
     set(DIR ${module})

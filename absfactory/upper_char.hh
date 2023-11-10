@@ -1,14 +1,15 @@
 #ifndef _UPPERPRINTER_H
 #define _UPPERPRINTER_H
 
+#include <cstdio>
+
 #include "abs_char.hh"
-#include <stdio.h>
 
 class UpperChar : public AbsChar {
  public:
-  UpperChar() {}
-  ~UpperChar() {}
-  virtual void printChar() override { printf("HELLO UPPER!\n"); }
+  UpperChar() = default;
+  ~UpperChar() override = default;
+   void PrintChar() override { printf("HELLO UPPER!\n"); }
 };
 
 #endif  // _UPPERPRINTER_H

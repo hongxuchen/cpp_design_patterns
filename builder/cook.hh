@@ -8,14 +8,14 @@ class MultiCuisineCook {
   MultiCuisineCook() = default;
   ~MultiCuisineCook() = default;
 
-  void setMealBuilder(MealBuilder* mealBuilder) { builder_ = mealBuilder; }
+  void SetMealBuilder(MealBuilder* meal_builder) { builder_ = meal_builder; }
 
-  Meal const& getMeal() { return builder_->getMeal(); }
+  Meal const& GetMeal() { return builder_->GetMeal(); }
 
-  void createMeal() {
-    builder_->buildStarter();
-    builder_->buildMainCourse();
-    builder_->buildDessert();
+  void CreateMeal() {
+    builder_->BuildStarter();
+    builder_->BuildMainCourse();
+    builder_->BuildDessert();
   }
 
  private:

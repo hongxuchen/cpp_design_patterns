@@ -7,7 +7,7 @@
 class AddExpr final : public Expr {
  public:
   AddExpr(ExprTy add) : add_(add) {}
-  virtual void interpret(Context& context) override;
+  void Interpret(Context& context) override;
 
  private:
   ExprTy add_;

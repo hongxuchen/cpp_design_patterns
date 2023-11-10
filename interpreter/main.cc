@@ -13,12 +13,12 @@ int main() {
   Context context(15);
   auto aexpr = std::shared_ptr<Expr>(std::make_shared<AddExpr>(1));
   auto mexpr = std::shared_ptr<Expr>(std::make_shared<MulExpr>(2));
-  aexpr->interpret(context);
-  mexpr->interpret(context);
+  aexpr->Interpret(context);
+  mexpr->Interpret(context);
   /// assert(type_id_with_cvr<decltype(aexpr)>() ==
   ///        type_id_with_cvr<decltype(mexpr)>());
 
-  std::cout << "result: " << context.data() << '\n';
+  std::cout << "result: " << context.Data() << '\n';
 
   return 0;
 }

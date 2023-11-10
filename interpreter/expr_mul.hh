@@ -7,7 +7,7 @@
 class MulExpr final : public Expr {
  public:
   MulExpr(ExprTy mul) : mul_(mul) {}
-  virtual void interpret(Context& context) override;
+  void Interpret(Context& context) override;
 
  private:
   int mul_;

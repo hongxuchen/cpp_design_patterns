@@ -7,7 +7,7 @@
 class DateTimePrinter {
  public:
   DateTimePrinter();
-  void print();
+  static void Print();
 
  private:
   TimePrinter tp_;

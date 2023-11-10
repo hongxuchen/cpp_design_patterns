@@ -8,9 +8,9 @@
 class ByeMessageImpl final : public AbsMessageImpl {
  public:
   ByeMessageImpl() = default;
-  ~ByeMessageImpl() override {}
+  ~ByeMessageImpl() override = default;
 
-  void sendMessage() override { printf("Goodbye\n"); }
+  void SendMessage() override { printf("Goodbye\n"); }
 };
 
 #endif

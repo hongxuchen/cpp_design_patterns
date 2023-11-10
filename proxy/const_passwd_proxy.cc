@@ -2,6 +2,6 @@
 #include <string>
 char const* const_passwd = "1234";
 
-bool ConstPasswdProxy::verify(std::string const& passwd) {
+bool ConstPasswdProxy::Verify(std::string const& passwd) {
   return passwd == const_passwd;
 }

@@ -5,24 +5,24 @@
 
 class Command {
  public:
-  Command(RoastCook* cook) { cook_ = cook; }
+  Command(RoastCook* cook) : cook ( cook) {}
   virtual void ExecuteCmd() = 0;
   virtual ~Command() = default;
 
  protected:
-  RoastCook* cook_;
+  RoastCook* cook;
 };
 
 class MakeMuttonCmd final : public Command {
  public:
   MakeMuttonCmd(RoastCook* cook) : Command(cook) {}
-   void ExecuteCmd() override { cook_->MakeMutton(); }
+   void ExecuteCmd() override { cook->MakeMutton(); }
 };
 
 class MakeChickenWingCmd final : public Command {
  public:
   MakeChickenWingCmd(RoastCook* cook) : Command(cook) {}
-   void ExecuteCmd() override { cook_->MakeChickenWing(); }
+   void ExecuteCmd() override { cook->MakeChickenWing(); }
 };
 
 #endif

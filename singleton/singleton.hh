@@ -8,8 +8,8 @@ class Single {
   Single() {}
 
  public:
-  void dump() { std::cout << "hello\n"; }
-  static Single &getInstance() {
+  static void Dump() { std::cout << "hello\n"; }
+  static Single &GetInstance() {
     static Single single;
     return single;
   }

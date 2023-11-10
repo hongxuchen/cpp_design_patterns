@@ -3,9 +3,9 @@
 
 class AbsChar {
  public:
-  AbsChar() {}
-  virtual ~AbsChar() {}
-  virtual void printChar() = 0;
+  AbsChar() = default;
+  virtual ~AbsChar() = default;
+  virtual void PrintChar() = 0;
 };
 
 #endif

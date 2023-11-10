@@ -5,18 +5,20 @@
 
 class CharMessageSender : public AbsMsgSender {
  public:
-  CharMessageSender() : _impl(nullptr) {}
+  CharMessageSender() = default;
 
   ~CharMessageSender() override = default;
 
-  void sendMessage() override {
-    if (_impl) _impl->sendMessage();
+  void SendMessage() override {
+    if (impl_ != nullptr) {
+      impl_->SendMessage();
+    }
   }
 
-  void setMessage(AbsMessageImpl* impl) override { _impl = impl; }
+  void SetMessage(MsgTy impl) override { impl_ = impl; }
 
  protected:
-  AbsMessageImpl* _impl;
+  MsgTy impl_{nullptr};
 };
 
 #endif

@@ -3,9 +3,9 @@
 
 class AbsNum {
  public:
-  AbsNum() {}
-  virtual ~AbsNum() {}
-  virtual void printNum() = 0;
+  AbsNum() = default;
+  virtual ~AbsNum() = default;
+  virtual void PrintNum() = 0;
 };
 
 #endif

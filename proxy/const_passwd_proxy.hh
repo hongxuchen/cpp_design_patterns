@@ -5,7 +5,7 @@
 
 class ConstPasswdProxy final : public PasswordProxy {
  public:
-  bool verify(std::string const& passwd) override;
+  bool Verify(std::string const& passwd) override;
 };
 
 #endif

@@ -5,14 +5,14 @@
 #include <memory>
 
 class Component;
-typedef std::shared_ptr<Component> ComponentPtr;
+using ComponentPtr = std::shared_ptr<Component>;
 
 class Component {
  public:
-  virtual void operate() = 0;
-  virtual void add(ComponentPtr);
-  virtual void remove(ComponentPtr);
-  virtual ComponentPtr getChild(std::size_t index);
+  virtual void Operate() = 0;
+  virtual void Add(ComponentPtr);
+  virtual void Remove(ComponentPtr);
+  virtual ComponentPtr GetChild(std::size_t index);
 
   virtual ~Component() = default;
 
@@ -22,15 +22,15 @@ class Component {
 
 class Leaf final : public Component {
  public:
-  virtual void operate() override;
+  void Operate() override;
 };
 
 class Composite final : public Component {
  public:
-  virtual void operate() override;
-  virtual void add(ComponentPtr) override;
-  virtual void remove(ComponentPtr) override;
-  virtual ComponentPtr getChild(std::size_t index) override;
+  void Operate() override;
+  void Add(ComponentPtr) override;
+  void Remove(ComponentPtr) override;
+  ComponentPtr GetChild(std::size_t index) override;
 
  private:
   std::vector<ComponentPtr> comVect_;

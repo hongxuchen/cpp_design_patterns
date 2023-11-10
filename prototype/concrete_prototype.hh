@@ -10,9 +10,9 @@ class ConcretePrototype final : public Prototype {
   ConcretePrototype(ConcretePrototype const&) {
     printf("%s\n", __PRETTY_FUNCTION__);
   }
-  ~ConcretePrototype() { printf("%s\n", __PRETTY_FUNCTION__); }
+  ~ConcretePrototype() override { printf("%s\n", __PRETTY_FUNCTION__); }
 
-  virtual std::shared_ptr<Prototype> clone() override {
+  std::shared_ptr<Prototype> Clone() override {
     return std::make_shared<ConcretePrototype>(*this);
   }
 };

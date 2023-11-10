@@ -4,7 +4,7 @@
 #include <ctime>
 #include <iostream>
 
-void TimePrinter::printTime() {
+void TimePrinter::PrintTime() {
   time_t const now = time(nullptr);
   char date[128] = {
       0,

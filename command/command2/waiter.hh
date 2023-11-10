@@ -6,11 +6,11 @@ class Command;
 
 class Waiter {
  public:
-  void setCmd(Command* cmd);
-  void notify();
+  void SetCmd(Command* cmd);
+  void Notify();
 
  protected:
-  std::vector<Command*> cmds_;
+  std::vector<Command*> cmds;
 };
 
 #endif
